@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conversor de Temperatura</title>
+	<link rel="stylesheet" type="text/css" href="Complemento/style.css">
+</head>
+<body>
+	<div id="inicio">
+		<fieldset class="borda">
+			<legend>Converter Temperaturas</legend>
+			<p style="font-size: 1.5rem;">Escolha uma das opções de conversão:</p>
+			<br>
+			<p><button class= "botao" onclick="menu(1)">Celsius > Kelvin</button></p>
+			<p><button class= "botao" onclick="menu(2)">Kelvin > Celsius</button></p>
+			<p><button class= "botao" onclick="menu(3)">Celsius > Érick</button></p>
+			<p><button class= "botao" onclick="menu(4)">Kelvin > Érick</button></p>
+			<br>
+		</fieldset>
+	</div>
+	<div id="ck" class="inv">
+		<fieldset class="borda">
+			<legend>Celsius para Kelvin</legend>
+			<p>T°C + 273,15 = TK</p>
+			<p><input type="number" id="inpck" class="entrada" autofocus placeholder="Temperatura em °C"></p>
+			<p><input type="text" id="resck" class="entrada" placeholder="Temperatura em K" readonly></p>
+			<p id="text0" class="height"></p>
+			<p><button class= "botao" onclick="CK(+inpck.value)">Converter</button> <button class= "botao" onclick="limpar()">Limpar</button></p>
+			<br>
+			<p><button class= "botao" onclick="menu(5)">Voltar</button></p>
+		</fieldset>
+	</div>
+	<div id="kc" class="inv"> 
+		<fieldset class="borda">
+			<legend>Kelvin para Celsius</legend>
+			<p>TK - 273,15 = T°C</p>
+			<p><input type="number" id="inpkc" class="entrada" autofocus placeholder="Temperatura em K"></p>
+			<p><input type="text" id="reskc" class="entrada" placeholder="Temperatura em °C" readonly></p>
+			<p id="text1" class="height"></p>
+			<p><button class= "botao" onclick="KC(+inpkc.value)">Converter</button> <button class= "botao" onclick="limpar()">Limpar</button></p>
+			<br>
+			<p><button class= "botao" onclick="menu(5)">Voltar</button></p>
+		</fieldset>
+	</div>
+	<div id="ce" class="inv">
+		<fieldset class="borda">
+			<legend>Celsius para Érick</legend>
+			<p>T°C - 17,8 = TE</p>
+			<p><input type="number" id="inpce" class="entrada" autofocus placeholder="Temperatura em °C"></p>
+			<p><input type="text" id="resce" class="entrada" placeholder="Temperatura em E" readonly></p>
+			<p id="text2" class="height"></p>
+			<p><button class= "botao" onclick="CE(+inpce.value)">Converter</button> <button class= "botao" onclick="limpar()">Limpar</button></p>
+			<br>
+			<p><button class= "botao" onclick="menu(5)">Voltar</button></p>
+		</fieldset>
+	</div>
+	<div id="ke" class="inv">
+		<fieldset class="borda">
+			<legend>Kelvin para Érick</legend>
+			<p>TK - 290,95 = TE</p>
+			<p><input type="number" id="inpke" class="entrada" autofocus placeholder="Temperatura em K"></p>
+			<p><input type="text" id="reske" class="entrada" placeholder="Temperatura em E" readonly></p>
+			<p id="text3" class="height"></p>
+			<p><button class= "botao" onclick="KE(+inpke.value)">Converter</button> <button class= "botao" onclick="limpar()">Limpar</button></p>
+			<br>
+			<p><button class= "botao" onclick="menu(5)">Voltar</button></p>
+		</fieldset>
+	</div>
+<script type="text/javascript" src="Complemento/system.js"></script>
+</body>
+</html>
